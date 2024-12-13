@@ -48,8 +48,7 @@ h1 {
 }
 
 .gallery img {
-    width: 100%;
-    max-width: 280px;
+    width: auto;
     border-radius: 15px;
     border: 3px solid #31a031;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
