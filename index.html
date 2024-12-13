@@ -1,90 +1,114 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Picture Gallery</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            flex-direction: column;
-        }
+/* Weed-themed Minecraft Plugin Blog */
 
-        h1 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #444;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700;900&display=swap');
 
-        .gallery {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-            max-width: 1200px;
-            width: auto;
-            padding: 20px;
-        }
+body {
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #121212, #0e870e);
+    color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
 
-        .gallery img {
-            max-width: 300px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+    color: #f4f4f9;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
 
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
+.description {
+    font-size: 1.5rem;
+    color: #d2f2d2;
+    margin: 10px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
-        .description {
-            font-size: 1.2em;
-            color: #666;
-            margin: 20px 0;
-        }
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 1200px;
+}
 
-        footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
-        }
+.gallery img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 15px;
+    border: 3px solid #31a031;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        footer a {
-            margin-left: 10px;
-            text-decoration: none;
-            color: #0073e6;
-        }
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
 
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome to the Picture Gallery</h1>
-    <div class="description">
-        <p>Here you can see current pictures of the Drugs plugin. Please note that this page is still being finalized.</p>
-    </div>
-    <div class="gallery">
-        <img src="./Update picture Gallery_files/image.png" alt="Bild 1">
-        <img src="./Update picture Gallery_files/image2.png" alt="Bild 2">
-        <img src="./Update picture Gallery_files/image3.png" alt="Bild 3">
-    </div>
-    <footer>
-        <p class="copyright">© 2024 <span class="server-name-footer">Lars_SVW</span>. All rights reserved.</p>
-        <a href="https://lars-svw.de/impressum.html">Impressum</a>
-        <a href="https://lars-svw.de/datenschutz.html">Datenschutz</a>
-    </footer>
-</body>
-</html>
+footer {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #0e870e, #121212);
+    color: #b3d9b3;
+    font-size: 0.9rem;
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 0;
+}
+
+footer a {
+    color: #74d274;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #d2f2d2;
+}
+
+/* Custom Weed-themed Elements */
+
+.leaf-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background: url('https://cdn-icons-png.flaticon.com/512/1065/1065721.png') no-repeat center;
+    background-size: contain;
+}
+
+button {
+    font-family: 'Mulish', sans-serif;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: #31a031;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: #74d274;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
