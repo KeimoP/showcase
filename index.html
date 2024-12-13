@@ -3,88 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Picture Gallery</title>
+    <title>Weed Plugin Picture Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Mulish', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background: url('https://images.unsplash.com/photo-1597636254017-87324d7b4d73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920') no-repeat center center fixed;
+            background-size: cover;
+            color: #f4f4f9;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
             flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
         }
 
         h1 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #444;
+            font-size: 3rem;
+            margin-top: 20px;
+            color: #f4f4f9;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .description {
+            font-size: 1.5rem;
+            color: #d2f2d2;
+            margin: 10px 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .gallery {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             flex-wrap: wrap;
             gap: 20px;
-            max-width: 1200px;
-            width: 100%;
+            margin: 20px;
             padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            max-width: 1200px;
         }
 
         .gallery img {
-            max-width: 300px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 280px;
+            border-radius: 15px;
+            border: 3px solid #31a031;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
-
-        .description {
-            font-size: 1.2em;
-            color: #666;
-            margin: 20px 0;
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
         }
 
         footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #0e870e, #121212);
+            color: #b3d9b3;
+            font-size: 0.9rem;
+            box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            bottom: 0;
         }
 
         footer a {
-            margin-left: 10px;
+            color: #74d274;
             text-decoration: none;
-            color: #0073e6;
+            margin: 0 10px;
+            font-weight: 600;
         }
 
         footer a:hover {
             text-decoration: underline;
+            color: #d2f2d2;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to the Picture Gallery</h1>
+    <h1>Weed Plugin Picture Gallery</h1>
     <div class="description">
-        <p>Here you can see current pictures of the Drugs plugin. Please note that this page is still being finalized.</p>
+        <p>Explore the latest pictures from our Minecraft weed-themed plugin. This gallery showcases exciting updates and features!</p>
     </div>
     <div class="gallery">
-        <img src="./Update picture Gallery_files/image.png" alt="Bild 1">
-        <img src="./Update picture Gallery_files/image2.png" alt="Bild 2">
-        <img src="./Update picture Gallery_files/image3.png" alt="Bild 3">
+        <img src="./Update picture Gallery_files/image.png" alt="Weed Plant 1">
+        <img src="./Update picture Gallery_files/image2.png" alt="Weed Plant 2">
+        <img src="./Update picture Gallery_files/image3.png" alt="Weed Plant 3">
     </div>
     <footer>
-        <p class="copyright">© 2024 <span class="server-name-footer">Lars_SVW</span>. All rights reserved.</p>
-        <a href="https://lars-svw.de/impressum.html">Impressum</a>
-        <a href="https://lars-svw.de/datenschutz.html">Datenschutz</a>
+        <p>© 2024 Lars_SVW. All rights reserved. <a href="https://lars-svw.de/impressum.html">Impressum</a> | <a href="https://lars-svw.de/datenschutz.html">Datenschutz</a></p>
     </footer>
 </body>
 </html>
