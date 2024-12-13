@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('./images/background.png') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Ensure the background covers the entire page */
+    background-position: center center; /* Center the background image */
+    color: #f0f0f0; /* Light text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+/* Adding custom font using @font-face */
+@font-face {
+    font-family: 'Signatra', sans-serif;
+    src: url('./font/Signatra.otf') format('opentype'),
+         url('./font/Signatra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+h1 {
+    font-size: 4rem;
+    margin-top: 20px;
+    color: #a3c174;
+    text-shadow: 0 6px 15px rgb(19, 37, 27);
+    animation: glow 3s infinite alternate;
+}
+
+.description {
+    font-size: 1.5rem;
+    margin: 20px;
+    text-align: center;
+    background-color: rgba(35, 61, 23, 0.9);
+    border-radius: 10px;
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #f4f4f9;
+}
+
+/* Gallery container styling */
+.gallery {
+    display: flex;
+    flex-direction: column;   /* Stack images vertically */
+    align-items: center; /* Center images horizontally */
+    justify-content: center;     
+    gap: 30px;                /* Space between the images */
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(10, 20, 10, 0.9); /* Darker green background for the container */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 100%;          /* Make sure the gallery takes up the full width */
+    overflow: hidden;         /* Hide any overflow content */
+    background: url('./images/background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Gallery image styling */
+.gallery img {
+    width: 100%;          /* Make images take full width of their container */
+    height: auto;         /* Maintain aspect ratio */
+    max-width: 100%;      /* Prevent images from being stretched */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;     /* Change cursor to indicate it's clickable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for gallery images */
+.gallery img:hover {
+    transform: scale(1.05); /* Slightly zoom in the image */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+/* Modal (lightbox) styles */
+.modal {
+    display: none;          /* Hidden by default */
+    position: fixed;        /* Fixed position to cover the screen */
+    z-index: 999;           /* Above all other content */
+    left: 0;
+    top: 0;
+    width: 100%;            /* Full width */
+    height: 100%;           /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    justify-content: center; /* Center the content */
+    align-items: center;    /* Center the modal content */
+    overflow: hidden;       /* Prevent scrolling */
+}
+
+/* Modal image styling */
+.modal-content {
+    max-width: 90%;         /* Maximum width of the image */
+    max-height: 80%;        /* Maximum height of the image */
+    margin: auto;           /* Center the image in the modal */
+    display: block;
+    border-radius: 15px;
+}
+
+/* Close button in the modal */
+.close {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #f0f0f0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #233d17, #1b2a13);
+    color: #b3d9b3;
+    font-size: 0.9rem;
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer a {
+    color: #a3c174;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #fffff0;
+}
+
+button {
+    font-family: 'Mulish', sans-serif;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: #fffff0;
+    background: #677d40;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: #a3c174;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Keyframes */
+@keyframes glow {
+    0% {
+        text-shadow: 0 6px 15px rgba(163, 193, 116, 0.8);
+    }
+    100% {
+        text-shadow: 0 6px 25px rgba(163, 193, 116, 1);
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%) translateX(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) translateX(var(--xMovement)) rotate(var(--rotation));
+    }
+}
